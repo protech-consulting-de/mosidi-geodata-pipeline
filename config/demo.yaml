@@ -1,0 +1,86 @@
+version: 1
+sources:
+  - id: brandenburg_gemeinden
+    type: wfs
+    kind: geometry
+    url: https://isk.geobasis-bb.de/ows/vg_wfs
+    feature_type: app:gem
+    wfs_version: 2.0.0
+    srs_name: urn:ogc:def:crs:EPSG::4326
+    source_crs: EPSG:4326
+    axis_order: yx
+    id_field: ags
+    name_field: gem_name
+    sort_by: app:ags
+    page_size: 100
+    max_features: 10000
+    expected_bounds: [11.0, 51.0, 15.0, 54.0]
+    request_pause: 0.3
+    publisher: GeoBasis-DE/LGB
+    metadata_title: Gemeindegrenzen Brandenburg
+    granularity: Gemeinden
+    license: https://www.govdata.de/dl-de/by-2-0
+    attribution: © GeoBasis-DE/LGB, dl-de/by-2-0
+    interval_seconds: 604800
+
+  - id: inkar_arbeitslose_2023_bb
+    type: csv
+    kind: attributes
+    url: https://www.bbr-server.de/imagemap/inkar/download/inkar_2025.zip
+    zip_member: "*inkar*.csv"
+    encoding: utf-8-sig
+    delimiter: ";"
+    decimal: ","
+    max_download_bytes: 650000000
+    max_uncompressed_bytes: 8000000000
+    max_rows: 100000000
+    filters:
+      Bereich: {equals: LRB}
+      ID: {equals: "2176"}
+      Kuerzel: {equals: alo}
+      Raumbezug: {equals: Gemeinden}
+      Zeitbezug: {equals: "2023"}
+      Kennziffer: {prefix: "12"}
+    key_fields: [Kennziffer, Bereich, Kuerzel, Indikator, Zeitbezug]
+    fields:
+      indikator: Indikator
+      kennziffer: Kennziffer
+      wert: Wert
+      zeitbezug: Zeitbezug
+    geo_id_width: 8
+    publisher: INKAR
+    metadata_title: Arbeitslose 2023 in Brandenburgs Gemeinden
+    granularity: Gemeinden
+    license: https://www.govdata.de/dl-de/by-2-0
+    attribution: Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR), INKAR Ausgabe 2025
+    interval_seconds: 2592000
+
+  - id: afs_zensus2022_einwohner_bb
+    type: csv
+    format: xlsx
+    kind: attributes
+    url: https://download.statistik-berlin-brandenburg.de/07afbdeaedfc6def/b6ac8d6506f3/Zensus2022-Daten-Dashboard-Brandenburg-Gemeinden.xlsx
+    xlsx:
+      sheet: GESCHLECHT_BB_GEM
+      start_row: 12
+      columns: {geo_id: 1, name: 2, value: 3}
+      region_prefix: "12"
+      expected_rows: 413
+      year: 2022
+      indicator: Einwohner am 15.05.2022
+    encoding: utf-8-sig
+    delimiter: ";"
+    decimal: ","
+    key_fields: [Kennziffer, Indikator, Zeitbezug]
+    fields:
+      indikator: Indikator
+      kennziffer: {column: Kennziffer, transform: ars_to_ags}
+      wert: Wert
+      zeitbezug: Zeitbezug
+    geo_id_width: 8
+    publisher: Amt für Statistik Berlin-Brandenburg
+    metadata_title: Einwohner Zensus 2022 in Brandenburgs Gemeinden
+    granularity: Gemeinden
+    license: Weitergabe und Vervielfältigung mit Quellenangabe laut Originaldatei
+    attribution: © Amt für Statistik Berlin-Brandenburg, Potsdam 2024; Zensus 2022
+    interval_seconds: 2592000

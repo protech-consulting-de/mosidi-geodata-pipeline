@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Importbericht 20261105T175958Z-b1d19401</title>
+<style>
+:root { color-scheme: light; font-family: system-ui, -apple-system, sans-serif; color: #172a38; background: #f4f7f8; }
+body { margin: 0; line-height: 1.55; }
+main { max-width: 1060px; margin: 0 auto; padding: 38px 24px 60px; }
+h1 { font-size: 2rem; margin: 0 0 8px; line-height: 1.2; }
+h2 { margin-top: 32px; font-size: 1.35rem; }
+h3 { font-size: 1rem; margin-bottom: 6px; }
+.label { color: #496375; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 12px; }
+.run-id { overflow-wrap: anywhere; color: #496375; }
+dl { display: grid; grid-template-columns: minmax(120px, 180px) 1fr; gap: 6px 18px; }
+dt { font-weight: 650; } dd { margin: 0; overflow-wrap: anywhere; }
+.notice { border-left: 4px solid #157c82; padding: 10px 16px; background: #e5f2f2; }
+.table-wrap { overflow-x: auto; background: white; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { padding: 11px 14px; text-align: left; border-bottom: 1px solid #d8e1e6; vertical-align: top; overflow-wrap: anywhere; }
+thead { background: #e8eef1; } tbody th { font-weight: 550; }
+caption { text-align: left; font-weight: 650; padding: 8px 0; }
+details { margin: 12px 0; background: white; border: 1px solid #d8e1e6; border-radius: 6px; }
+summary { padding: 14px 16px; cursor: pointer; font-weight: 650; overflow-wrap: anywhere; }
+summary span { font-weight: 400; color: #496375; margin-left: 12px; }
+.details-content { padding: 0 16px 18px; }
+.metrics { max-width: 520px; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #f4f7f8; padding: 12px; font-size: .86rem; }
+li { overflow-wrap: anywhere; margin: 6px 0; }
+footer { margin-top: 30px; color: #496375; font-size: .85rem; }
+@media (max-width: 600px) { main { padding: 22px 14px; } dl { grid-template-columns: 1fr; gap: 0; } dd { margin-bottom: 10px; } th, td { padding: 9px; } }
+@media print { body { background: white; } main { padding: 0; } details { break-inside: avoid; } }
+</style>
+</head>
+<body><main>
+<p class="label">MOSIDI Geodaten Import Pipeline</p>
+<h1>Importbericht</h1>
+<p class="run-id">Lauf: 20261105T175958Z-b1d19401</p>
+<dl>
+<dt>Gesamtstatus</dt><dd>Erfolgreich</dd>
+<dt>Modus</dt><dd>Prüflauf ohne Änderung der Zieldaten</dd>
+<dt>Gestartet</dt><dd>2026-11-05T17:59:58.647823+00:00</dd>
+<dt>Beendet</dt><dd>2026-11-05T18:01:39.415232+00:00</dd>
+<dt>Laufzeit</dt><dd>100.767 Sekunden</dd>
+<dt>Quellen</dt><dd>3</dd>
+</dl>
+<p class="notice">Prüflauf: Die Änderungszahlen zeigen eine Vorschau. Die fachlichen Zieltabellen wurden durch diesen Lauf nicht geändert.</p>
+
+<h2>Ergebnisse je Quelle</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Quelle</th><th scope="col">Status</th><th scope="col">Neu</th><th scope="col">Geändert</th><th scope="col">Entfernt</th><th scope="col">Übernommen</th></tr></thead>
+<tbody><tr><th scope="row">brandenburg_gemeinden</th><td>Erfolgreich</td><td>0</td><td>0</td><td>0</td><td>Nein</td></tr><tr><th scope="row">inkar_arbeitslose_2023_bb</th><td>Erfolgreich</td><td>0</td><td>0</td><td>0</td><td>Nein</td></tr><tr><th scope="row">afs_zensus2022_einwohner_bb</th><td>Erfolgreich</td><td>0</td><td>0</td><td>0</td><td>Nein</td></tr></tbody></table></div>
+<h2>Details und Datenherkunft</h2>
+<details>
+<summary>brandenburg_gemeinden <span>Erfolgreich</span></summary>
+<div class="details-content">
+<p>Quelltyp: wfs ·
+Änderungen übernommen: Nein ·
+Löschungen freigegeben: Ja</p>
+<table class="metrics"><caption>Kennzahlen</caption><tbody><tr><th scope="row">Abgerufen</th><td>413</td></tr><tr><th scope="row">Gültig</th><td>413</td></tr><tr><th scope="row">Neu</th><td>0</td></tr><tr><th scope="row">Geändert</th><td>0</td></tr><tr><th scope="row">Entfernt</th><td>0</td></tr><tr><th scope="row">Unverändert</th><td>413</td></tr><tr><th scope="row">Ausgelassen</th><td>0</td></tr><tr><th scope="row">Repariert</th><td>0</td></tr></tbody></table>
+<h3>Warnungen</h3><p>Keine Warnungen gemeldet.</p><h3>Herkunft und Abruf</h3><pre>{
+  &quot;attribution&quot;: &quot;© GeoBasis-DE/LGB, dl-de/by-2-0&quot;,
+  &quot;license&quot;: &quot;https://www.govdata.de/dl-de/by-2-0&quot;,
+  &quot;url&quot;: &quot;https://isk.geobasis-bb.de/ows/vg_wfs&quot;,
+  &quot;feature_type&quot;: &quot;app:gem&quot;,
+  &quot;matched&quot;: 413,
+  &quot;sha256&quot;: &quot;de5fd3cc8ca0fca2f17e4a323f36a0f8965625d56618060ae03ab8848cb68d6a&quot;,
+  &quot;wfs_version&quot;: &quot;2.0.0&quot;,
+  &quot;axis_order&quot;: &quot;yx&quot;,
+  &quot;scope&quot;: &quot;all&quot;
+}</pre>
+</div></details><details>
+<summary>inkar_arbeitslose_2023_bb <span>Erfolgreich</span></summary>
+<div class="details-content">
+<p>Quelltyp: csv ·
+Änderungen übernommen: Nein ·
+Löschungen freigegeben: Ja</p>
+<table class="metrics"><caption>Kennzahlen</caption><tbody><tr><th scope="row">Abgerufen</th><td>63426864</td></tr><tr><th scope="row">Gültig</th><td>413</td></tr><tr><th scope="row">Neu</th><td>0</td></tr><tr><th scope="row">Geändert</th><td>0</td></tr><tr><th scope="row">Entfernt</th><td>0</td></tr><tr><th scope="row">Unverändert</th><td>413</td></tr><tr><th scope="row">Ausgelassen</th><td>0</td></tr><tr><th scope="row">Repariert</th><td>0</td></tr></tbody></table>
+<h3>Warnungen</h3><p>Keine Warnungen gemeldet.</p><h3>Herkunft und Abruf</h3><pre>{
+  &quot;attribution&quot;: &quot;Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR), INKAR Ausgabe 2025&quot;,
+  &quot;license&quot;: &quot;https://www.govdata.de/dl-de/by-2-0&quot;,
+  &quot;url&quot;: &quot;https://www.bbr-server.de/imagemap/inkar/download/inkar_2025.zip&quot;,
+  &quot;sha256&quot;: &quot;82f6923a4bdce8f3d084a65574f5b8781391fa8a1a608ab4f366ca903b485bcc&quot;,
+  &quot;bytes&quot;: 433790695,
+  &quot;etag&quot;: &quot;\&quot;19db1ee7-63c3eb8c7ba80\&quot;&quot;,
+  &quot;last_modified&quot;: &quot;Wed, 13 Aug 2025 12:59:06 GMT&quot;,
+  &quot;cached&quot;: true,
+  &quot;zip_member&quot;: &quot;inkar_2025.csv&quot;,
+  &quot;uncompressed_bytes&quot;: 6762930064,
+  &quot;compressed_bytes&quot;: 427108480,
+  &quot;zip_compression&quot;: 9,
+  &quot;crc32&quot;: &quot;641e1091&quot;,
+  &quot;integrity_verified&quot;: true,
+  &quot;filters&quot;: {
+    &quot;Bereich&quot;: {
+      &quot;equals&quot;: &quot;LRB&quot;
+    },
+    &quot;ID&quot;: {
+      &quot;equals&quot;: &quot;2176&quot;
+    },
+    &quot;Kuerzel&quot;: {
+      &quot;equals&quot;: &quot;alo&quot;
+    },
+    &quot;Raumbezug&quot;: {
+      &quot;equals&quot;: &quot;Gemeinden&quot;
+    },
+    &quot;Zeitbezug&quot;: {
+      &quot;equals&quot;: &quot;2023&quot;
+    },
+    &quot;Kennziffer&quot;: {
+      &quot;prefix&quot;: &quot;12&quot;
+    }
+  },
+  &quot;key_fields&quot;: [
+    &quot;Kennziffer&quot;,
+    &quot;Bereich&quot;,
+    &quot;Kuerzel&quot;,
+    &quot;Indikator&quot;,
+    &quot;Zeitbezug&quot;
+  ]
+}</pre>
+</div></details><details>
+<summary>afs_zensus2022_einwohner_bb <span>Erfolgreich</span></summary>
+<div class="details-content">
+<p>Quelltyp: csv ·
+Änderungen übernommen: Nein ·
+Löschungen freigegeben: Ja</p>
+<table class="metrics"><caption>Kennzahlen</caption><tbody><tr><th scope="row">Abgerufen</th><td>413</td></tr><tr><th scope="row">Gültig</th><td>413</td></tr><tr><th scope="row">Neu</th><td>0</td></tr><tr><th scope="row">Geändert</th><td>0</td></tr><tr><th scope="row">Entfernt</th><td>0</td></tr><tr><th scope="row">Unverändert</th><td>413</td></tr><tr><th scope="row">Ausgelassen</th><td>0</td></tr><tr><th scope="row">Repariert</th><td>0</td></tr></tbody></table>
+<h3>Warnungen</h3><p>Keine Warnungen gemeldet.</p><h3>Herkunft und Abruf</h3><pre>{
+  &quot;attribution&quot;: &quot;© Amt für Statistik Berlin-Brandenburg, Potsdam 2024; Zensus 2022&quot;,
+  &quot;license&quot;: &quot;Weitergabe und Vervielfältigung mit Quellenangabe laut Originaldatei&quot;,
+  &quot;url&quot;: &quot;https://download.statistik-berlin-brandenburg.de/07afbdeaedfc6def/b6ac8d6506f3/Zensus2022-Daten-Dashboard-Brandenburg-Gemeinden.xlsx&quot;,
+  &quot;sha256&quot;: &quot;b775fdc6be1add1e3ddb1a6efd828053b3fd2c63a86ac59681c64188a40f44bf&quot;,
+  &quot;bytes&quot;: 335826,
+  &quot;etag&quot;: &quot;\&quot;2f0fab48fd3e2f44224d23224937abc1\&quot;&quot;,
+  &quot;last_modified&quot;: &quot;Mon, 24 Jun 2024 13:00:52 GMT&quot;,
+  &quot;cached&quot;: true,
+  &quot;input_format&quot;: &quot;xlsx&quot;,
+  &quot;transformation&quot;: {
+    &quot;sheet&quot;: &quot;GESCHLECHT_BB_GEM&quot;,
+    &quot;columns&quot;: {
+      &quot;geo_id&quot;: 1,
+      &quot;name&quot;: 2,
+      &quot;value&quot;: 3
+    },
+    &quot;start_row&quot;: 12,
+    &quot;geo_id_width&quot;: 12,
+    &quot;year&quot;: 2022,
+    &quot;indicator&quot;: &quot;Einwohner am 15.05.2022&quot;,
+    &quot;region_prefix&quot;: &quot;12&quot;,
+    &quot;expected_rows&quot;: 413
+  },
+  &quot;transformed_sha256&quot;: &quot;0ea7a244ab96186105534a85790ae45325aa96be0b7498081bf50e48af3912ac&quot;,
+  &quot;transformed_bytes&quot;: 25670,
+  &quot;transformed_rows&quot;: 413,
+  &quot;ignored_nonmatching_rows&quot;: 8,
+  &quot;filters&quot;: {},
+  &quot;key_fields&quot;: [
+    &quot;Kennziffer&quot;,
+    &quot;Indikator&quot;,
+    &quot;Zeitbezug&quot;
+  ]
+}</pre>
+</div></details>
+<details><summary>Vollständiger maschinenlesbarer Bericht</summary><div class="details-content"><pre>{
+  &quot;run_id&quot;: &quot;20261105T175958Z-b1d19401&quot;,
+  &quot;started_at&quot;: &quot;2026-11-05T17:59:58.647823+00:00&quot;,
+  &quot;mode&quot;: &quot;dry-run&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;source_results&quot;: [
+    {
+      &quot;id&quot;: &quot;brandenburg_gemeinden&quot;,
+      &quot;type&quot;: &quot;wfs&quot;,
+      &quot;status&quot;: &quot;success&quot;,
+      &quot;committed&quot;: false,
+      &quot;mode&quot;: &quot;dry-run&quot;,
+      &quot;started_at&quot;: &quot;2026-11-05T17:59:58.755922+00:00&quot;,
+      &quot;warnings&quot;: [],
+      &quot;provenance&quot;: {
+        &quot;attribution&quot;: &quot;© GeoBasis-DE/LGB, dl-de/by-2-0&quot;,
+        &quot;license&quot;: &quot;https://www.govdata.de/dl-de/by-2-0&quot;,
+        &quot;url&quot;: &quot;https://isk.geobasis-bb.de/ows/vg_wfs&quot;,
+        &quot;feature_type&quot;: &quot;app:gem&quot;,
+        &quot;matched&quot;: 413,
+        &quot;sha256&quot;: &quot;de5fd3cc8ca0fca2f17e4a323f36a0f8965625d56618060ae03ab8848cb68d6a&quot;,
+        &quot;wfs_version&quot;: &quot;2.0.0&quot;,
+        &quot;axis_order&quot;: &quot;yx&quot;,
+        &quot;scope&quot;: &quot;all&quot;
+      },
+      &quot;fetched_count&quot;: 413,
+      &quot;accepted_count&quot;: 413,
+      &quot;skipped_count&quot;: 0,
+      &quot;repaired_count&quot;: 0,
+      &quot;filtered_count&quot;: 0,
+      &quot;deletion_enabled&quot;: true,
+      &quot;added_count&quot;: 0,
+      &quot;changed_count&quot;: 0,
+      &quot;removed_count&quot;: 0,
+      &quot;unchanged_count&quot;: 413,
+      &quot;retained_count&quot;: 0,
+      &quot;changes&quot;: [],
+      &quot;finished_at&quot;: &quot;2026-11-05T18:00:07.051540+00:00&quot;,
+      &quot;duration_seconds&quot;: 8.296
+    },
+    {
+      &quot;id&quot;: &quot;inkar_arbeitslose_2023_bb&quot;,
+      &quot;type&quot;: &quot;csv&quot;,
+      &quot;status&quot;: &quot;success&quot;,
+      &quot;committed&quot;: false,
+      &quot;mode&quot;: &quot;dry-run&quot;,
+      &quot;started_at&quot;: &quot;2026-11-05T18:00:07.051569+00:00&quot;,
+      &quot;warnings&quot;: [],
+      &quot;provenance&quot;: {
+        &quot;attribution&quot;: &quot;Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR), INKAR Ausgabe 2025&quot;,
+        &quot;license&quot;: &quot;https://www.govdata.de/dl-de/by-2-0&quot;,
+        &quot;url&quot;: &quot;https://www.bbr-server.de/imagemap/inkar/download/inkar_2025.zip&quot;,
+        &quot;sha256&quot;: &quot;82f6923a4bdce8f3d084a65574f5b8781391fa8a1a608ab4f366ca903b485bcc&quot;,
+        &quot;bytes&quot;: 433790695,
+        &quot;etag&quot;: &quot;\&quot;19db1ee7-63c3eb8c7ba80\&quot;&quot;,
+        &quot;last_modified&quot;: &quot;Wed, 13 Aug 2025 12:59:06 GMT&quot;,
+        &quot;cached&quot;: true,
+        &quot;zip_member&quot;: &quot;inkar_2025.csv&quot;,
+        &quot;uncompressed_bytes&quot;: 6762930064,
+        &quot;compressed_bytes&quot;: 427108480,
+        &quot;zip_compression&quot;: 9,
+        &quot;crc32&quot;: &quot;641e1091&quot;,
+        &quot;integrity_verified&quot;: true,
+        &quot;filters&quot;: {
+          &quot;Bereich&quot;: {
+            &quot;equals&quot;: &quot;LRB&quot;
+          },
+          &quot;ID&quot;: {
+            &quot;equals&quot;: &quot;2176&quot;
+          },
+          &quot;Kuerzel&quot;: {
+            &quot;equals&quot;: &quot;alo&quot;
+          },
+          &quot;Raumbezug&quot;: {
+            &quot;equals&quot;: &quot;Gemeinden&quot;
+          },
+          &quot;Zeitbezug&quot;: {
+            &quot;equals&quot;: &quot;2023&quot;
+          },
+          &quot;Kennziffer&quot;: {
+            &quot;prefix&quot;: &quot;12&quot;
+          }
+        },
+        &quot;key_fields&quot;: [
+          &quot;Kennziffer&quot;,
+          &quot;Bereich&quot;,
+          &quot;Kuerzel&quot;,
+          &quot;Indikator&quot;,
+          &quot;Zeitbezug&quot;
+        ]
+      },
+      &quot;fetched_count&quot;: 63426864,
+      &quot;accepted_count&quot;: 413,
+      &quot;skipped_count&quot;: 0,
+      &quot;repaired_count&quot;: 0,
+      &quot;filtered_count&quot;: 63426451,
+      &quot;deletion_enabled&quot;: true,
+      &quot;added_count&quot;: 0,
+      &quot;changed_count&quot;: 0,
+      &quot;removed_count&quot;: 0,
+      &quot;unchanged_count&quot;: 413,
+      &quot;retained_count&quot;: 0,
+      &quot;changes&quot;: [],
+      &quot;finished_at&quot;: &quot;2026-11-05T18:01:39.110831+00:00&quot;,
+      &quot;duration_seconds&quot;: 92.059
+    },
+    {
+      &quot;id&quot;: &quot;afs_zensus2022_einwohner_bb&quot;,
+      &quot;type&quot;: &quot;csv&quot;,
+      &quot;status&quot;: &quot;success&quot;,
+      &quot;committed&quot;: false,
+      &quot;mode&quot;: &quot;dry-run&quot;,
+      &quot;started_at&quot;: &quot;2026-11-05T18:01:39.110888+00:00&quot;,
+      &quot;warnings&quot;: [],
+      &quot;provenance&quot;: {
+        &quot;attribution&quot;: &quot;© Amt für Statistik Berlin-Brandenburg, Potsdam 2024; Zensus 2022&quot;,
+        &quot;license&quot;: &quot;Weitergabe und Vervielfältigung mit Quellenangabe laut Originaldatei&quot;,
+        &quot;url&quot;: &quot;https://download.statistik-berlin-brandenburg.de/07afbdeaedfc6def/b6ac8d6506f3/Zensus2022-Daten-Dashboard-Brandenburg-Gemeinden.xlsx&quot;,
+        &quot;sha256&quot;: &quot;b775fdc6be1add1e3ddb1a6efd828053b3fd2c63a86ac59681c64188a40f44bf&quot;,
+        &quot;bytes&quot;: 335826,
+        &quot;etag&quot;: &quot;\&quot;2f0fab48fd3e2f44224d23224937abc1\&quot;&quot;,
+        &quot;last_modified&quot;: &quot;Mon, 24 Jun 2024 13:00:52 GMT&quot;,
+        &quot;cached&quot;: true,
+        &quot;input_format&quot;: &quot;xlsx&quot;,
+        &quot;transformation&quot;: {
+          &quot;sheet&quot;: &quot;GESCHLECHT_BB_GEM&quot;,
+          &quot;columns&quot;: {
+            &quot;geo_id&quot;: 1,
+            &quot;name&quot;: 2,
+            &quot;value&quot;: 3
+          },
+          &quot;start_row&quot;: 12,
+          &quot;geo_id_width&quot;: 12,
+          &quot;year&quot;: 2022,
+          &quot;indicator&quot;: &quot;Einwohner am 15.05.2022&quot;,
+          &quot;region_prefix&quot;: &quot;12&quot;,
+          &quot;expected_rows&quot;: 413
+        },
+        &quot;transformed_sha256&quot;: &quot;0ea7a244ab96186105534a85790ae45325aa96be0b7498081bf50e48af3912ac&quot;,
+        &quot;transformed_bytes&quot;: 25670,
+        &quot;transformed_rows&quot;: 413,
+        &quot;ignored_nonmatching_rows&quot;: 8,
+        &quot;filters&quot;: {},
+        &quot;key_fields&quot;: [
+          &quot;Kennziffer&quot;,
+          &quot;Indikator&quot;,
+          &quot;Zeitbezug&quot;
+        ]
+      },
+      &quot;fetched_count&quot;: 413,
+      &quot;accepted_count&quot;: 413,
+      &quot;skipped_count&quot;: 0,
+      &quot;repaired_count&quot;: 0,
+      &quot;filtered_count&quot;: 0,
+      &quot;deletion_enabled&quot;: true,
+      &quot;added_count&quot;: 0,
+      &quot;changed_count&quot;: 0,
+      &quot;removed_count&quot;: 0,
+      &quot;unchanged_count&quot;: 413,
+      &quot;retained_count&quot;: 0,
+      &quot;changes&quot;: [],
+      &quot;finished_at&quot;: &quot;2026-11-05T18:01:39.414575+00:00&quot;,
+      &quot;duration_seconds&quot;: 0.304
+    }
+  ],
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;config_sha256&quot;: &quot;b6ed4411a53f4b36c672f9a1f0d1ddea0e21b832155f45791eae23877a867f5d&quot;,
+  &quot;database&quot;: {
+    &quot;profile&quot;: &quot;mosidi-public-demo-v1&quot;,
+    &quot;warnings&quot;: [],
+    &quot;control_schema_present&quot;: true
+  },
+  &quot;finished_at&quot;: &quot;2026-11-05T18:01:39.415232+00:00&quot;,
+  &quot;duration_seconds&quot;: 100.767
+}
+</pre></div></details>
+<footer>Dieser Bericht enthält keine externen Skripte, Schriftarten oder Dienste. Angaben zur Datenherkunft stehen bei der jeweiligen Quelle.</footer>
+</main></body></html>

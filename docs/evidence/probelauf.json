@@ -1,0 +1,175 @@
+{
+  "run_id": "20261105T175958Z-b1d19401",
+  "started_at": "2026-11-05T17:59:58.647823+00:00",
+  "mode": "dry-run",
+  "version": "0.1.0",
+  "source_results": [
+    {
+      "id": "brandenburg_gemeinden",
+      "type": "wfs",
+      "status": "success",
+      "committed": false,
+      "mode": "dry-run",
+      "started_at": "2026-11-05T17:59:58.755922+00:00",
+      "warnings": [],
+      "provenance": {
+        "attribution": "© GeoBasis-DE/LGB, dl-de/by-2-0",
+        "license": "https://www.govdata.de/dl-de/by-2-0",
+        "url": "https://isk.geobasis-bb.de/ows/vg_wfs",
+        "feature_type": "app:gem",
+        "matched": 413,
+        "sha256": "de5fd3cc8ca0fca2f17e4a323f36a0f8965625d56618060ae03ab8848cb68d6a",
+        "wfs_version": "2.0.0",
+        "axis_order": "yx",
+        "scope": "all"
+      },
+      "fetched_count": 413,
+      "accepted_count": 413,
+      "skipped_count": 0,
+      "repaired_count": 0,
+      "filtered_count": 0,
+      "deletion_enabled": true,
+      "added_count": 0,
+      "changed_count": 0,
+      "removed_count": 0,
+      "unchanged_count": 413,
+      "retained_count": 0,
+      "changes": [],
+      "finished_at": "2026-11-05T18:00:07.051540+00:00",
+      "duration_seconds": 8.296
+    },
+    {
+      "id": "inkar_arbeitslose_2023_bb",
+      "type": "csv",
+      "status": "success",
+      "committed": false,
+      "mode": "dry-run",
+      "started_at": "2026-11-05T18:00:07.051569+00:00",
+      "warnings": [],
+      "provenance": {
+        "attribution": "Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR), INKAR Ausgabe 2025",
+        "license": "https://www.govdata.de/dl-de/by-2-0",
+        "url": "https://www.bbr-server.de/imagemap/inkar/download/inkar_2025.zip",
+        "sha256": "82f6923a4bdce8f3d084a65574f5b8781391fa8a1a608ab4f366ca903b485bcc",
+        "bytes": 433790695,
+        "etag": "\"19db1ee7-63c3eb8c7ba80\"",
+        "last_modified": "Wed, 13 Aug 2025 12:59:06 GMT",
+        "cached": true,
+        "zip_member": "inkar_2025.csv",
+        "uncompressed_bytes": 6762930064,
+        "compressed_bytes": 427108480,
+        "zip_compression": 9,
+        "crc32": "641e1091",
+        "integrity_verified": true,
+        "filters": {
+          "Bereich": {
+            "equals": "LRB"
+          },
+          "ID": {
+            "equals": "2176"
+          },
+          "Kuerzel": {
+            "equals": "alo"
+          },
+          "Raumbezug": {
+            "equals": "Gemeinden"
+          },
+          "Zeitbezug": {
+            "equals": "2023"
+          },
+          "Kennziffer": {
+            "prefix": "12"
+          }
+        },
+        "key_fields": [
+          "Kennziffer",
+          "Bereich",
+          "Kuerzel",
+          "Indikator",
+          "Zeitbezug"
+        ]
+      },
+      "fetched_count": 63426864,
+      "accepted_count": 413,
+      "skipped_count": 0,
+      "repaired_count": 0,
+      "filtered_count": 63426451,
+      "deletion_enabled": true,
+      "added_count": 0,
+      "changed_count": 0,
+      "removed_count": 0,
+      "unchanged_count": 413,
+      "retained_count": 0,
+      "changes": [],
+      "finished_at": "2026-11-05T18:01:39.110831+00:00",
+      "duration_seconds": 92.059
+    },
+    {
+      "id": "afs_zensus2022_einwohner_bb",
+      "type": "csv",
+      "status": "success",
+      "committed": false,
+      "mode": "dry-run",
+      "started_at": "2026-11-05T18:01:39.110888+00:00",
+      "warnings": [],
+      "provenance": {
+        "attribution": "© Amt für Statistik Berlin-Brandenburg, Potsdam 2024; Zensus 2022",
+        "license": "Weitergabe und Vervielfältigung mit Quellenangabe laut Originaldatei",
+        "url": "https://download.statistik-berlin-brandenburg.de/07afbdeaedfc6def/b6ac8d6506f3/Zensus2022-Daten-Dashboard-Brandenburg-Gemeinden.xlsx",
+        "sha256": "b775fdc6be1add1e3ddb1a6efd828053b3fd2c63a86ac59681c64188a40f44bf",
+        "bytes": 335826,
+        "etag": "\"2f0fab48fd3e2f44224d23224937abc1\"",
+        "last_modified": "Mon, 24 Jun 2024 13:00:52 GMT",
+        "cached": true,
+        "input_format": "xlsx",
+        "transformation": {
+          "sheet": "GESCHLECHT_BB_GEM",
+          "columns": {
+            "geo_id": 1,
+            "name": 2,
+            "value": 3
+          },
+          "start_row": 12,
+          "geo_id_width": 12,
+          "year": 2022,
+          "indicator": "Einwohner am 15.05.2022",
+          "region_prefix": "12",
+          "expected_rows": 413
+        },
+        "transformed_sha256": "0ea7a244ab96186105534a85790ae45325aa96be0b7498081bf50e48af3912ac",
+        "transformed_bytes": 25670,
+        "transformed_rows": 413,
+        "ignored_nonmatching_rows": 8,
+        "filters": {},
+        "key_fields": [
+          "Kennziffer",
+          "Indikator",
+          "Zeitbezug"
+        ]
+      },
+      "fetched_count": 413,
+      "accepted_count": 413,
+      "skipped_count": 0,
+      "repaired_count": 0,
+      "filtered_count": 0,
+      "deletion_enabled": true,
+      "added_count": 0,
+      "changed_count": 0,
+      "removed_count": 0,
+      "unchanged_count": 413,
+      "retained_count": 0,
+      "changes": [],
+      "finished_at": "2026-11-05T18:01:39.414575+00:00",
+      "duration_seconds": 0.304
+    }
+  ],
+  "status": "success",
+  "config_sha256": "b6ed4411a53f4b36c672f9a1f0d1ddea0e21b832155f45791eae23877a867f5d",
+  "database": {
+    "profile": "mosidi-public-demo-v1",
+    "warnings": [],
+    "control_schema_present": true
+  },
+  "finished_at": "2026-11-05T18:01:39.415232+00:00",
+  "duration_seconds": 100.767
+}

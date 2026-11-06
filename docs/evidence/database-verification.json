@@ -1,0 +1,72 @@
+{
+  "verified_at": "2026-11-05T18:03:22.265897+00:00",
+  "checks": {
+    "geometries": {
+      "query": "SELECT count(*) AS total,count(*) FILTER(WHERE ST_IsValid(geom)) AS valid,min(ST_SRID(geom)) AS min_srid,max(ST_SRID(geom)) AS max_srid FROM public.\"Kommunale Gebiete Deutschland\"",
+      "rows": [
+        {
+          "total": 413,
+          "valid": 413,
+          "min_srid": 4326,
+          "max_srid": 4326
+        }
+      ]
+    },
+    "attributes": {
+      "query": "SELECT source,indikator,zeitbezug,count(*) AS rows FROM public.dashboard_data_de GROUP BY source,indikator,zeitbezug ORDER BY source",
+      "rows": [
+        {
+          "source": "Amt für Statistik Berlin-Brandenburg",
+          "indikator": "Einwohner am 15.05.2022",
+          "zeitbezug": 2022,
+          "rows": 413
+        },
+        {
+          "source": "INKAR",
+          "indikator": "Arbeitslose",
+          "zeitbezug": 2023,
+          "rows": 413
+        }
+      ]
+    },
+    "joined": {
+      "query": "SELECT count(*) AS total,count(g.id) AS matched FROM public.dashboard_data_de d LEFT JOIN public.\"Kommunale Gebiete Deutschland\" g ON g.nationalco=d.kennziffer",
+      "rows": [
+        {
+          "total": 826,
+          "matched": 826
+        }
+      ]
+    },
+    "example": {
+      "query": "SELECT g.nationalco,g.name,d.indikator,d.zeitbezug,d.wert,d.source FROM public.dashboard_data_de d JOIN public.\"Kommunale Gebiete Deutschland\" g ON g.nationalco=d.kennziffer WHERE g.nationalco='12051000' ORDER BY d.source",
+      "rows": [
+        {
+          "nationalco": "12051000",
+          "name": "Brandenburg an der Havel",
+          "indikator": "Einwohner am 15.05.2022",
+          "zeitbezug": 2022,
+          "wert": "73552",
+          "source": "Amt für Statistik Berlin-Brandenburg"
+        },
+        {
+          "nationalco": "12051000",
+          "name": "Brandenburg an der Havel",
+          "indikator": "Arbeitslose",
+          "zeitbezug": 2023,
+          "wert": "3281",
+          "source": "INKAR"
+        }
+      ]
+    },
+    "database_versions": {
+      "query": "SELECT version() AS postgres,postgis_full_version() AS postgis",
+      "rows": [
+        {
+          "postgres": "PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+          "postgis": "POSTGIS=\"3.7.0 1fdbb1c\" [EXTENSION] PGSQL=\"170\" GEOS=\"3.15.0-CAPI-1.21.0\" PROJ=\"9.9.0 NETWORK_ENABLED=OFF URL_ENDPOINT=https://cdn.proj.org USER_WRITABLE_DIRECTORY=/var/lib/postgresql/.local/share/proj DATABASE_PATH=/usr/share/proj/proj.db\" (compiled against PROJ 9.9.0) LIBXML=\"2.9.14\" LIBJSON=\"0.18\" LIBPROTOBUF=\"1.5.1\" WAGYU=\"0.5.0 (Internal)\" TOPOLOGY"
+        }
+      ]
+    }
+  }
+}

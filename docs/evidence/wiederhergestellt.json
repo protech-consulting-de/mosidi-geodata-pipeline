@@ -1,0 +1,176 @@
+{
+  "run_id": "20261105T174833Z-dab542f8",
+  "mode": "import",
+  "version": "0.1.0",
+  "recovered": true,
+  "source_results": [
+    {
+      "id": "brandenburg_gemeinden",
+      "mode": "import",
+      "type": "wfs",
+      "run_id": "20261105T174833Z-dab542f8",
+      "status": "success",
+      "changes": [],
+      "warnings": [],
+      "committed": true,
+      "source_id": "brandenburg_gemeinden",
+      "provenance": {
+        "url": "https://isk.geobasis-bb.de/ows/vg_wfs",
+        "scope": "all",
+        "sha256": "1444e6c53f6b6a9ec336da93c89bf6d44e6261b09ced3f3b214dd21436fe5d28",
+        "license": "https://www.govdata.de/dl-de/by-2-0",
+        "matched": 413,
+        "axis_order": "yx",
+        "attribution": "© GeoBasis-DE/LGB, dl-de/by-2-0",
+        "wfs_version": "2.0.0",
+        "feature_type": "app:gem"
+      },
+      "started_at": "2026-11-05T17:48:33.244896+00:00",
+      "added_count": 0,
+      "finished_at": "2026-11-05T17:48:40.845151+00:00",
+      "changed_count": 0,
+      "fetched_count": 413,
+      "removed_count": 0,
+      "skipped_count": 0,
+      "accepted_count": 413,
+      "filtered_count": 0,
+      "repaired_count": 0,
+      "retained_count": 0,
+      "unchanged_count": 413,
+      "deletion_enabled": true,
+      "duration_seconds": 7.6
+    },
+    {
+      "id": "inkar_arbeitslose_2023_bb",
+      "mode": "import",
+      "type": "csv",
+      "run_id": "20261105T174833Z-dab542f8",
+      "status": "success",
+      "changes": [],
+      "warnings": [],
+      "committed": true,
+      "source_id": "inkar_arbeitslose_2023_bb",
+      "provenance": {
+        "url": "https://www.bbr-server.de/imagemap/inkar/download/inkar_2025.zip",
+        "etag": "\"19db1ee7-63c3eb8c7ba80\"",
+        "bytes": 433790695,
+        "crc32": "641e1091",
+        "cached": true,
+        "sha256": "82f6923a4bdce8f3d084a65574f5b8781391fa8a1a608ab4f366ca903b485bcc",
+        "filters": {
+          "ID": {
+            "equals": "2176"
+          },
+          "Bereich": {
+            "equals": "LRB"
+          },
+          "Kuerzel": {
+            "equals": "alo"
+          },
+          "Raumbezug": {
+            "equals": "Gemeinden"
+          },
+          "Zeitbezug": {
+            "equals": "2023"
+          },
+          "Kennziffer": {
+            "prefix": "12"
+          }
+        },
+        "license": "https://www.govdata.de/dl-de/by-2-0",
+        "key_fields": [
+          "Kennziffer",
+          "Bereich",
+          "Kuerzel",
+          "Indikator",
+          "Zeitbezug"
+        ],
+        "zip_member": "inkar_2025.csv",
+        "attribution": "Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR), INKAR Ausgabe 2025",
+        "last_modified": "Wed, 13 Aug 2025 12:59:06 GMT",
+        "zip_compression": 9,
+        "compressed_bytes": 427108480,
+        "integrity_verified": true,
+        "uncompressed_bytes": 6762930064
+      },
+      "started_at": "2026-11-05T17:48:40.847004+00:00",
+      "added_count": 0,
+      "finished_at": "2026-11-05T17:50:14.372232+00:00",
+      "changed_count": 0,
+      "fetched_count": 63426864,
+      "removed_count": 0,
+      "skipped_count": 0,
+      "accepted_count": 413,
+      "filtered_count": 63426451,
+      "repaired_count": 0,
+      "retained_count": 0,
+      "unchanged_count": 413,
+      "deletion_enabled": true,
+      "duration_seconds": 93.525
+    },
+    {
+      "id": "afs_zensus2022_einwohner_bb",
+      "mode": "import",
+      "type": "csv",
+      "run_id": "20261105T174833Z-dab542f8",
+      "status": "success",
+      "changes": [],
+      "warnings": [],
+      "committed": true,
+      "source_id": "afs_zensus2022_einwohner_bb",
+      "provenance": {
+        "url": "https://download.statistik-berlin-brandenburg.de/07afbdeaedfc6def/b6ac8d6506f3/Zensus2022-Daten-Dashboard-Brandenburg-Gemeinden.xlsx",
+        "etag": "\"2f0fab48fd3e2f44224d23224937abc1\"",
+        "bytes": 335826,
+        "cached": true,
+        "sha256": "b775fdc6be1add1e3ddb1a6efd828053b3fd2c63a86ac59681c64188a40f44bf",
+        "filters": {},
+        "license": "Weitergabe und Vervielfältigung mit Quellenangabe laut Originaldatei",
+        "key_fields": [
+          "Kennziffer",
+          "Indikator",
+          "Zeitbezug"
+        ],
+        "attribution": "© Amt für Statistik Berlin-Brandenburg, Potsdam 2024; Zensus 2022",
+        "input_format": "xlsx",
+        "last_modified": "Mon, 24 Jun 2024 13:00:52 GMT",
+        "transformation": {
+          "year": 2022,
+          "sheet": "GESCHLECHT_BB_GEM",
+          "columns": {
+            "name": 2,
+            "value": 3,
+            "geo_id": 1
+          },
+          "indicator": "Einwohner am 15.05.2022",
+          "start_row": 12,
+          "geo_id_width": 12,
+          "expected_rows": 413,
+          "region_prefix": "12"
+        },
+        "transformed_rows": 413,
+        "transformed_bytes": 25670,
+        "transformed_sha256": "0ea7a244ab96186105534a85790ae45325aa96be0b7498081bf50e48af3912ac",
+        "ignored_nonmatching_rows": 8
+      },
+      "started_at": "2026-11-05T17:50:14.374297+00:00",
+      "added_count": 0,
+      "finished_at": "2026-11-05T17:50:14.816857+00:00",
+      "changed_count": 0,
+      "fetched_count": 413,
+      "removed_count": 0,
+      "skipped_count": 0,
+      "accepted_count": 413,
+      "filtered_count": 0,
+      "repaired_count": 0,
+      "retained_count": 0,
+      "unchanged_count": 413,
+      "deletion_enabled": true,
+      "duration_seconds": 0.443
+    }
+  ],
+  "status": "warning",
+  "warnings": [
+    "Recovered from source-level evidence. Running or committed statuses may reflect an interrupted reporting phase."
+  ]
+}

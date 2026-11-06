@@ -1,0 +1,97 @@
+{
+  "command": "python -m geopipeline --config config/demo.yaml run --dry-run",
+  "exit_code": 0,
+  "database_unchanged": true,
+  "before": {
+    "pipeline_meta.catalog_state": {
+      "rows": 3,
+      "sha256": "8eb0747f6eab8d541ecf5ca6afad25f91537b29dae902d33f8649f70ce8739f7"
+    },
+    "pipeline_meta.source_catalog": {
+      "rows": 3,
+      "sha256": "83bf9f46ce0971f907b577238d7de87fd9803e8bf0fb435347a66df08f72a8a2"
+    },
+    "pipeline_meta.source_config": {
+      "rows": 3,
+      "sha256": "82e8e101647d85a27836749e8f02d510159bd24578852ba4f098fa6778d6653a"
+    },
+    "pipeline_meta.source_records": {
+      "rows": 1239,
+      "sha256": "7ee84deae808c4592cb7dcb3907c6ec2a738a7eec32d94758281f29d3c67fcd9"
+    },
+    "pipeline_meta.source_runs": {
+      "rows": 3,
+      "sha256": "f424ad2c131d9f9d3531bb907e00abbc8742f04e82d9cf8ad7b1c6a1c47f57ad"
+    },
+    "public.Kommunale Gebiete Deutschland": {
+      "rows": 413,
+      "sha256": "73b9a4aa055469ac3dd86597df9fe3d92d53739371b54d761bb7b590e6ea7918"
+    },
+    "public.dashboard_data_de": {
+      "rows": 826,
+      "sha256": "6316d7c6ece877b61646cb71b802108ae7f1e12d118b8a48de18d17dfee3a498"
+    },
+    "public.table_metadata": {
+      "rows": 3,
+      "sha256": "e09c39b387cff841a8ffd6f2d109d0ef9a5f9fba7413c52d1ba182e7951f4ebc"
+    },
+    "public.Kommunale Gebiete Deutschland_id_seq": {
+      "sequence": [
+        413,
+        true
+      ]
+    },
+    "public.dashboard_data_de_id_seq": {
+      "sequence": [
+        826,
+        true
+      ]
+    }
+  },
+  "after": {
+    "pipeline_meta.catalog_state": {
+      "rows": 3,
+      "sha256": "8eb0747f6eab8d541ecf5ca6afad25f91537b29dae902d33f8649f70ce8739f7"
+    },
+    "pipeline_meta.source_catalog": {
+      "rows": 3,
+      "sha256": "83bf9f46ce0971f907b577238d7de87fd9803e8bf0fb435347a66df08f72a8a2"
+    },
+    "pipeline_meta.source_config": {
+      "rows": 3,
+      "sha256": "82e8e101647d85a27836749e8f02d510159bd24578852ba4f098fa6778d6653a"
+    },
+    "pipeline_meta.source_records": {
+      "rows": 1239,
+      "sha256": "7ee84deae808c4592cb7dcb3907c6ec2a738a7eec32d94758281f29d3c67fcd9"
+    },
+    "pipeline_meta.source_runs": {
+      "rows": 3,
+      "sha256": "f424ad2c131d9f9d3531bb907e00abbc8742f04e82d9cf8ad7b1c6a1c47f57ad"
+    },
+    "public.Kommunale Gebiete Deutschland": {
+      "rows": 413,
+      "sha256": "73b9a4aa055469ac3dd86597df9fe3d92d53739371b54d761bb7b590e6ea7918"
+    },
+    "public.dashboard_data_de": {
+      "rows": 826,
+      "sha256": "6316d7c6ece877b61646cb71b802108ae7f1e12d118b8a48de18d17dfee3a498"
+    },
+    "public.table_metadata": {
+      "rows": 3,
+      "sha256": "e09c39b387cff841a8ffd6f2d109d0ef9a5f9fba7413c52d1ba182e7951f4ebc"
+    },
+    "public.Kommunale Gebiete Deutschland_id_seq": {
+      "sequence": [
+        413,
+        true
+      ]
+    },
+    "public.dashboard_data_de_id_seq": {
+      "sequence": [
+        826,
+        true
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+name: mosidi-pipeline-demo
+
+services:
+  db:
+    # Verified 2026-11-05. Upstream publishes amd64 only; Docker Desktop on
+    # Apple Silicon runs this isolated demo database through emulation.
+    image: postgis/postgis:17-3.7@sha256:ca211960fbe54834dcb6ff16aae6d70f72f66f4a789820aed3d5691025c9d698
+    platform: linux/amd64
+    environment:
+      POSTGRES_DB: mosidi_demo
+      POSTGRES_USER: pipeline_demo
+      POSTGRES_PASSWORD: ${DEMO_DB_PASSWORD:-demo-only-change-me}
+    ports:
+      - "127.0.0.1:55436:5432"
+    volumes:
+      - demo_database:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pipeline_demo -d mosidi_demo"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+      start_period: 10s
+
+  pipeline:
+    build:
+      context: .
+    profiles: ["tools"]
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # When overriding the password, use URL-safe characters or provide a
+      # complete percent-encoded connection string in PIPELINE_DATABASE_URL.
+      DATABASE_URL: ${PIPELINE_DATABASE_URL:-postgresql://pipeline_demo:${DEMO_DB_PASSWORD:-demo-only-change-me}@db:5432/mosidi_demo}
+    entrypoint:
+      - python
+      - -m
+      - geopipeline
+      - --config
+      - /app/config/demo.yaml
+      - --report-dir
+      - /app/reports
+      - --cache-dir
+      - /app/.cache
+    command: ["check"]
+    volumes:
+      - ./config:/app/config:ro
+      - ./reports:/app/reports
+      - ./.cache:/app/.cache
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+    init: true
+
+volumes:
+  demo_database:

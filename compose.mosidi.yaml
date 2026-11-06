@@ -1,0 +1,38 @@
+# Merge with the EXISTING MOSIDI docker-compose.yml. This file adds only the
+# importer; it does not replace or initialize brandenburg_db.
+#
+# Set GEOPIPELINE_PROJECT_DIR to this project's absolute path and DATABASE_URL
+# to a connection string whose host is brandenburg_db on MOSIDI's default
+# network. MOSIDI must already be running and its actual schema verified.
+#
+# docker compose -f /path/MOSIDI/docker-compose.yml \
+#   -f /path/pipeline/compose.mosidi.yaml run --rm --no-deps geopipeline check
+services:
+  geopipeline:
+    build:
+      context: ${GEOPIPELINE_PROJECT_DIR:?Set GEOPIPELINE_PROJECT_DIR to the pipeline project absolute path}
+    profiles: ["pipeline"]
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?Set DATABASE_URL for the existing brandenburg_db database}
+    entrypoint:
+      - python
+      - -m
+      - geopipeline
+      - --config
+      - /app/config/mosidi.yaml
+      - --report-dir
+      - /app/reports
+      - --cache-dir
+      - /app/.cache
+    command: ["check"]
+    volumes:
+      - ${GEOPIPELINE_PROJECT_DIR}/config:/app/config:ro
+      - ${GEOPIPELINE_PROJECT_DIR}/reports:/app/reports
+      - ${GEOPIPELINE_PROJECT_DIR}/.cache:/app/.cache
+    networks: ["default"]
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+    init: true
